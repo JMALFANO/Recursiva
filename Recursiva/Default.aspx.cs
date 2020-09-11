@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
@@ -40,6 +41,8 @@ namespace Recursiva
                 objSocio.NiveldeEstudios = valores[4];
                 lstSocios.Add(objSocio);
             }
+
+
         
             return lstSocios;
         }
@@ -72,8 +75,57 @@ namespace Recursiva
             List<Socio> usersByAge = lstSocios.OrderBy(user => user.Edad).ToList();
             return usersByAge;
         }
-               
-        public void GetCantAll()
+
+        public List<Socio> GetCantSociosMayoryMenorEdad()
+        {
+            string ruta = Server.MapPath("~/Upload/" + FileUploadArchivo.FileName);
+            string[] lineas = File.ReadAllLines(ruta);
+            List<Socio> lstSocios = new List<Socio>();
+            List<int> cantEquipos = new List<int>();
+
+            string estadocivil = "Casado";
+            string estudios = "Universitario";
+
+            foreach (string linea in lineas)
+            {
+                var valores = linea.Split(';');
+
+
+        
+
+
+   
+        
+
+
+                if (valores[3] == estadocivil && valores[4] == estudios) //valores[3] = EstadoCivil | valores[4] = NiveldeEstudios
+                {
+                    Socio objSocio = new Socio();
+
+                    objSocio.Nombre = valores[0];
+                    objSocio.Edad = int.Parse(valores[1]);
+                    objSocio.Equipo = valores[2];
+                    lstSocios.Add(objSocio);
+                }
+
+
+            }
+
+            foreach (Socio socio in lstSocios) { 
+            socio.Equipo            
+            }
+
+
+            List<Socio> usersByAge = lstSocios.OrderByDescending(user => user.Equipo).ToList();
+
+           
+
+            return usersByAge;
+
+
+        }
+
+        public void GetPromEdadRacing()
         {
             string ruta = Server.MapPath("~/Upload/" + FileUploadArchivo.FileName);
             string[] lineas = File.ReadAllLines(ruta);
@@ -101,7 +153,7 @@ namespace Recursiva
             MessageBox.Show(promedio + " Promedio de edad socios de Racing");
         }
 
-        public void GetPromEdadRacing()
+        public void GetCantAll()
         {
             string ruta = Server.MapPath("~/Upload/" + FileUploadArchivo.FileName);
             string[] lineas = File.ReadAllLines(ruta);
@@ -109,17 +161,17 @@ namespace Recursiva
             MessageBox.Show(lineas.Length + " registros totales");
         }
 
-
-
-
-
         void RealizarBusquedas() {
             GetCantAll(); //Obtiene la cantidad total de registros
+           
             GetPromEdadRacing(); //Obtiene el promedio de edad de los socios de Racing.
-      //      GetCasadosConEstudios(); //Obtiene los primeras 100 personas casadas y con estudios ordenados por su edad.
 
-           GridViewCasadosConEstudios.DataSource = GetCasadosConEstudios();
-            GridViewCasadosConEstudios.DataBind();
+           GridViewCasadosConEstudios.DataSource = GetCasadosConEstudios(); //Obtiene los primeras 100 personas casadas y con estudios ordenados por su edad.
+           GridViewCasadosConEstudios.DataBind();
+
+
+            GridViewCasadosConEstudios.DataSource = GetCantSociosMayoryMenorEdad(); //Obtiene los primeras 100 personas casadas y con estudios ordenados por su edad.
+            GridViewCasadosConEstudios.DataBind(); 
 
 
         }

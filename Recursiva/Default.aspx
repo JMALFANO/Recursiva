@@ -4,7 +4,7 @@
 
     <div class="jumbotron">
         <h1>Transformación de datos</h1>
-        <p class="lead">Seleccione un archivo CSV.<asp:FileUpload ID="FileUploadArchivo" runat="server" />
+        <p class="lead">Seleccione un archivo CSV.<asp:FileUpload ID="FileUploadArchivo" runat="server" Width="644px" />
         </p>
             <asp:Button ID="ButtonUploadArchivo"  class="btn btn-primary btn-lg" runat="server" OnClick="ButtonUploadArchivo_Click" Text="Subir Archivo" />
         

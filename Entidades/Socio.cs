@@ -7,7 +7,7 @@ namespace Entidades
     {
         public string Nombre { get; set; }
         public int Edad { get; set; }
-        public string Equipo { get; set; }
+        public Equipo Equipo { get; set; }
         public string EstadoCivil { get; set; }
         public string NiveldeEstudios { get; set; }
 
