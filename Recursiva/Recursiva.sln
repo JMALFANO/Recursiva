@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recursiva", "Recursiva.csproj", "{DA3CE253-DA6C-4BC7-8856-13C41460F9DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "..\Entidades\Entidades.csproj", "{B2BAEFAD-4A56-49D8-8F3A-2D7E37CD5A9C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA3CE253-DA6C-4BC7-8856-13C41460F9DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA3CE253-DA6C-4BC7-8856-13C41460F9DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA3CE253-DA6C-4BC7-8856-13C41460F9DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA3CE253-DA6C-4BC7-8856-13C41460F9DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2BAEFAD-4A56-49D8-8F3A-2D7E37CD5A9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2BAEFAD-4A56-49D8-8F3A-2D7E37CD5A9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2BAEFAD-4A56-49D8-8F3A-2D7E37CD5A9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2BAEFAD-4A56-49D8-8F3A-2D7E37CD5A9C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B90155FF-00CB-4957-B13A-07C3505078DE}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "qSVfT1uRuwp1JYDRyF9zmNJt7C+cURkEcDfzQC0oT3fQuMwntbfhamlp8FgCFINrKA1RGsBAv8E1pFddf6vo7A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\juanm\\source\\repos\\JMALFANO\\Recursiva\\Entidades\\Entidades.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\juanm\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\juanm\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
