@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "0ZGHk0CIZMEx9ojPvsCxDEx4fzGGYrk5SdDPKm+RJlwTTpGEZol7Wa9LtGiPWSnh2enkKUq5ssZCx6gVcsg2bQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\juanm\\source\\repos\\JMALFANO\\Recursiva\\CapaNegocio\\CapaNegocio.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\juanm\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\juanm\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
