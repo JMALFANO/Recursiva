@@ -7,3 +7,8 @@ C:\Users\juanm\source\repos\JMALFANO\Recursiva\CapaNegocio\obj\Debug\netstandard
 C:\Users\juanm\source\repos\JMALFANO\Recursiva\CapaNegocio\obj\Debug\netstandard2.0\CapaNegocio.dll
 C:\Users\juanm\source\repos\JMALFANO\Recursiva\CapaNegocio\obj\Debug\netstandard2.0\CapaNegocio.pdb
 C:\Users\juanm\source\repos\JMALFANO\Recursiva\CapaNegocio\obj\Debug\netstandard2.0\CapaNegocio.csprojAssemblyReference.cache
+C:\Users\juanm\source\repos\JMALFANO\Recursiva\CapaNegocio\bin\Debug\netstandard2.0\Entidades.dll
+C:\Users\juanm\source\repos\JMALFANO\Recursiva\CapaNegocio\bin\Debug\netstandard2.0\Entidades.pdb
+C:\Users\juanm\source\repos\JMALFANO\Recursiva\CapaNegocio\obj\Debug\netstandard2.0\CapaNegocio.csproj.CopyComplete
+C:\Users\juanm\source\repos\JMALFANO\Recursiva\CapaNegocio\bin\Debug\netstandard2.0\EntidadesDTO.dll
+C:\Users\juanm\source\repos\JMALFANO\Recursiva\CapaNegocio\bin\Debug\netstandard2.0\EntidadesDTO.pdb

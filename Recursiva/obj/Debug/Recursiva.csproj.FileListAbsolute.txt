@@ -94,3 +94,7 @@ C:\Users\juanm\source\repos\JMALFANO\Recursiva\Recursiva\obj\Debug\Recursiva.dll
 C:\Users\juanm\source\repos\JMALFANO\Recursiva\Recursiva\obj\Debug\Recursiva.pdb
 C:\Users\juanm\source\repos\JMALFANO\Recursiva\Recursiva\bin\Entidades.dll
 C:\Users\juanm\source\repos\JMALFANO\Recursiva\Recursiva\bin\Entidades.pdb
+C:\Users\juanm\source\repos\JMALFANO\Recursiva\Recursiva\bin\CapaNegocio.dll
+C:\Users\juanm\source\repos\JMALFANO\Recursiva\Recursiva\bin\CapaNegocio.pdb
+C:\Users\juanm\source\repos\JMALFANO\Recursiva\Recursiva\bin\EntidadesDTO.dll
+C:\Users\juanm\source\repos\JMALFANO\Recursiva\Recursiva\bin\EntidadesDTO.pdb

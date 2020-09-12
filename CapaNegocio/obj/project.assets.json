@@ -25,6 +25,26 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "Entidades/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Entidades.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entidades.dll": {}
+        }
+      },
+      "EntidadesDTO/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/EntidadesDTO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EntidadesDTO.dll": {}
+        }
       }
     }
   },
@@ -172,10 +192,22 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "Entidades/1.0.0": {
+      "type": "project",
+      "path": "../Entidades/Entidades.csproj",
+      "msbuildProject": "../Entidades/Entidades.csproj"
+    },
+    "EntidadesDTO/1.0.0": {
+      "type": "project",
+      "path": "../EntidadesDTO/EntidadesDTO.csproj",
+      "msbuildProject": "../EntidadesDTO/EntidadesDTO.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "Entidades >= 1.0.0",
+      "EntidadesDTO >= 1.0.0",
       "NETStandard.Library >= 2.0.3"
     ]
   },
@@ -209,7 +241,14 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\juanm\\source\\repos\\JMALFANO\\Recursiva\\EntidadesDTO\\EntidadesDTO.csproj": {
+              "projectPath": "C:\\Users\\juanm\\source\\repos\\JMALFANO\\Recursiva\\EntidadesDTO\\EntidadesDTO.csproj"
+            },
+            "C:\\Users\\juanm\\source\\repos\\JMALFANO\\Recursiva\\Entidades\\Entidades.csproj": {
+              "projectPath": "C:\\Users\\juanm\\source\\repos\\JMALFANO\\Recursiva\\Entidades\\Entidades.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,0 +1,8 @@
+C:\Users\juanm\source\repos\JMALFANO\Recursiva\EntidadesDTO\bin\Debug\netstandard2.0\EntidadesDTO.deps.json
+C:\Users\juanm\source\repos\JMALFANO\Recursiva\EntidadesDTO\bin\Debug\netstandard2.0\EntidadesDTO.dll
+C:\Users\juanm\source\repos\JMALFANO\Recursiva\EntidadesDTO\bin\Debug\netstandard2.0\EntidadesDTO.pdb
+C:\Users\juanm\source\repos\JMALFANO\Recursiva\EntidadesDTO\obj\Debug\netstandard2.0\EntidadesDTO.AssemblyInfoInputs.cache
+C:\Users\juanm\source\repos\JMALFANO\Recursiva\EntidadesDTO\obj\Debug\netstandard2.0\EntidadesDTO.AssemblyInfo.cs
+C:\Users\juanm\source\repos\JMALFANO\Recursiva\EntidadesDTO\obj\Debug\netstandard2.0\EntidadesDTO.csproj.CoreCompileInputs.cache
+C:\Users\juanm\source\repos\JMALFANO\Recursiva\EntidadesDTO\obj\Debug\netstandard2.0\EntidadesDTO.dll
+C:\Users\juanm\source\repos\JMALFANO\Recursiva\EntidadesDTO\obj\Debug\netstandard2.0\EntidadesDTO.pdb
