@@ -11,5 +11,8 @@ namespace Entidades
         public string EstadoCivil { get; set; }
         public string NiveldeEstudios { get; set; }
 
+        public Socio() {
+            this.Equipo = new Equipo();
+        }
     }
 }

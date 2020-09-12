@@ -1,0 +1,9 @@
+C:\Users\juanm\source\repos\JMALFANO\Recursiva\CapaNegocio\bin\Debug\netstandard2.0\CapaNegocio.deps.json
+C:\Users\juanm\source\repos\JMALFANO\Recursiva\CapaNegocio\bin\Debug\netstandard2.0\CapaNegocio.dll
+C:\Users\juanm\source\repos\JMALFANO\Recursiva\CapaNegocio\bin\Debug\netstandard2.0\CapaNegocio.pdb
+C:\Users\juanm\source\repos\JMALFANO\Recursiva\CapaNegocio\obj\Debug\netstandard2.0\CapaNegocio.AssemblyInfoInputs.cache
+C:\Users\juanm\source\repos\JMALFANO\Recursiva\CapaNegocio\obj\Debug\netstandard2.0\CapaNegocio.AssemblyInfo.cs
+C:\Users\juanm\source\repos\JMALFANO\Recursiva\CapaNegocio\obj\Debug\netstandard2.0\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\juanm\source\repos\JMALFANO\Recursiva\CapaNegocio\obj\Debug\netstandard2.0\CapaNegocio.dll
+C:\Users\juanm\source\repos\JMALFANO\Recursiva\CapaNegocio\obj\Debug\netstandard2.0\CapaNegocio.pdb
+C:\Users\juanm\source\repos\JMALFANO\Recursiva\CapaNegocio\obj\Debug\netstandard2.0\CapaNegocio.csprojAssemblyReference.cache

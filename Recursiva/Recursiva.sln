@@ -8,6 +8,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entidades", "..\Entidades\Entidades.csproj", "{B2BAEFAD-4A56-49D8-8F3A-2D7E37CD5A9C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaNegocio", "..\CapaNegocio\CapaNegocio.csproj", "{61D49549-CB95-4D92-ADE7-053B72AE92EA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B2BAEFAD-4A56-49D8-8F3A-2D7E37CD5A9C} = {B2BAEFAD-4A56-49D8-8F3A-2D7E37CD5A9C}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

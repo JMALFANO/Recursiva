@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections;
+﻿
+using Entidades;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Web;
-using System.Web.Compilation;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Web.WebPages;
 using System.Windows.Forms;
-using Entidades;
 
 namespace Recursiva
 {
@@ -26,33 +22,31 @@ namespace Recursiva
             string ruta = Server.MapPath("~/Upload/" + FileUploadArchivo.FileName);
             string[] lineas = File.ReadAllLines(ruta);
             List<Socio> lstSocios = new List<Socio>();
-           
-            
+
+
             foreach (string linea in lineas)
             {
                 var valores = linea.Split(';');
-              
+
                 Socio objSocio = new Socio();
 
                 objSocio.Nombre = valores[0];
                 objSocio.Edad = int.Parse(valores[1]);
-                objSocio.Equipo = valores[2];
+                objSocio.Equipo.Nombre = valores[2];
                 objSocio.EstadoCivil = valores[3];
                 objSocio.NiveldeEstudios = valores[4];
                 lstSocios.Add(objSocio);
             }
 
-
-        
             return lstSocios;
         }
 
-        public List<Socio> GetCasadosConEstudios()
+        public List<NombreEdadEquipoDTO> GetCasadosConEstudios()
         {
             string ruta = Server.MapPath("~/Upload/" + FileUploadArchivo.FileName);
             string[] lineas = File.ReadAllLines(ruta);
             List<Socio> lstSocios = new List<Socio>();
-           
+
             string estadocivil = "Casado";
             string estudios = "Universitario";
 
@@ -66,63 +60,135 @@ namespace Recursiva
 
                     objSocio.Nombre = valores[0];
                     objSocio.Edad = int.Parse(valores[1]);
-                    objSocio.Equipo = valores[2];
-                    lstSocios.Add(objSocio);                              
-                    }
-
-
-                }
-            List<Socio> usersByAge = lstSocios.OrderBy(user => user.Edad).ToList();
-            return usersByAge;
-        }
-
-        public List<Socio> GetCantSociosMayoryMenorEdad()
-        {
-            string ruta = Server.MapPath("~/Upload/" + FileUploadArchivo.FileName);
-            string[] lineas = File.ReadAllLines(ruta);
-            List<Socio> lstSocios = new List<Socio>();
-            List<int> cantEquipos = new List<int>();
-
-            string estadocivil = "Casado";
-            string estudios = "Universitario";
-
-            foreach (string linea in lineas)
-            {
-                var valores = linea.Split(';');
-
-
-        
-
-
-   
-        
-
-
-                if (valores[3] == estadocivil && valores[4] == estudios) //valores[3] = EstadoCivil | valores[4] = NiveldeEstudios
-                {
-                    Socio objSocio = new Socio();
-
-                    objSocio.Nombre = valores[0];
-                    objSocio.Edad = int.Parse(valores[1]);
-                    objSocio.Equipo = valores[2];
+                    objSocio.Equipo.Nombre = valores[2];
                     lstSocios.Add(objSocio);
                 }
-
-
             }
 
-            foreach (Socio socio in lstSocios) { 
-            socio.Equipo            
-            }
+            List<Socio> sociosPorEdad = lstSocios.OrderBy(user => user.Edad).Take(100).ToList();
 
-
-            List<Socio> usersByAge = lstSocios.OrderByDescending(user => user.Equipo).ToList();
-
+            List<NombreEdadEquipoDTO> socioFiltrado = new List<NombreEdadEquipoDTO>();
            
+                foreach (Socio socio in sociosPorEdad)
+                {
 
-            return usersByAge;
+                    NombreEdadEquipoDTO nuevosocio = new NombreEdadEquipoDTO();
+
+                    nuevosocio.Nombre = socio.Nombre;
+                    nuevosocio.Edad = socio.Edad;
+                    nuevosocio.Equipo = socio.Equipo;
+
+                    socioFiltrado.Add(nuevosocio);
+
+                }
+            
 
 
+
+            return socioFiltrado;
+
+        }
+
+        /*
+        public List<CantSociosMayoryMenorEdadDTO> GetCantSociosMAyoryMenorEdad() {
+            string ruta = Server.MapPath("~/Upload/" + FileUploadArchivo.FileName);
+            string[] lineas = File.ReadAllLines(ruta);
+            List<Socio> lstSocios = new List<Socio>();
+            List<CantSociosMayoryMenorEdadDTO> lst = new List<CantSociosMayoryMenorEdadDTO>();
+
+          
+
+            foreach (string linea in lineas)
+            {
+                var valores = linea.Split(';');
+
+                    Socio objSocio = new Socio();
+                    objSocio.Nombre = valores[0];
+                    objSocio.Edad = int.Parse(valores[1]);
+                    objSocio.Equipo.Nombre = valores[2];
+                    lstSocios.Add(objSocio);
+               
+            }
+
+          
+
+            return lstSocios;
+        }*/
+
+        public List<CantSociosMayoryMenorEdadDTO> GetDataEquipos()
+        {            string ruta = Server.MapPath("~/Upload/" + FileUploadArchivo.FileName);
+            string[] lineas = File.ReadAllLines(ruta);
+
+            List<Equipo> lstEquipos = new List<Equipo>();
+            List<CantSociosMayoryMenorEdadDTO> lst = new List<CantSociosMayoryMenorEdadDTO>();
+            List<CantSociosMayoryMenorEdadDTO> lstretornada = new List<CantSociosMayoryMenorEdadDTO>();
+            foreach (string linea in lineas)
+            {
+                var valores = linea.Split(';');
+
+                CantSociosMayoryMenorEdadDTO objSocio = new CantSociosMayoryMenorEdadDTO();            
+                objSocio.SocioEdad = int.Parse(valores[1]);
+                lst.Add(objSocio);
+
+                Equipo equipo = new Equipo();
+                equipo.Nombre = valores[2];
+
+                lstEquipos.Add(equipo);
+            }
+
+            List<Equipo> listadoSinRepetidos = (from p in lstEquipos
+                                    group p by new { p.Nombre } into grupo
+                                    where grupo.Count() > 1
+                                    select new Equipo()
+                                    {
+                                        Nombre = grupo.Key.Nombre,
+                                    }).ToList();
+
+
+            CantSociosMayoryMenorEdadDTO socio = new CantSociosMayoryMenorEdadDTO();
+            
+            foreach (Equipo eq in listadoSinRepetidos)
+            {
+                var edadMinima = lst.Min(x => x.SocioEdad);
+                var edadMaxima = lst.Max(x => x.SocioEdad);
+                var edadPromedio = lst.Average(x => x.SocioEdad);
+                socio.EdadPromedioSocios = double.Parse(edadPromedio.ToString());
+                socio.EdadMinima= double.Parse(edadMinima.ToString());
+                socio.EdadMaxima= double.Parse(edadMaxima.ToString());
+                socio.Equipo.Nombre = eq.Nombre;
+                lstretornada.Add(socio);
+            }
+
+            
+       
+            return lstretornada;
+        }
+        public List<NombresComunesRiverDTO> NombresMasComunesRiver() {
+
+
+            string ruta = Server.MapPath("~/Upload/" + FileUploadArchivo.FileName);
+            string[] lineas = File.ReadAllLines(ruta);
+            List<NombresComunesRiverDTO> lstSocios = new List<NombresComunesRiverDTO>();
+
+
+            foreach (string linea in lineas)
+            {
+                var valores = linea.Split(';');
+
+                NombresComunesRiverDTO objSocio = new NombresComunesRiverDTO();
+                objSocio.Nombre = valores[0];
+
+                lstSocios.Add(objSocio);
+            }
+
+            List<NombresComunesRiverDTO> lstNombresRepetidos = (from p in lstSocios
+                                               group p by new { p.Nombre } into grupo
+                                               let count = grupo.Count()
+                                               select new NombresComunesRiverDTO()
+                                                {
+                                                    Nombre = grupo.Key.Nombre,
+                                                }).Take(5).ToList();
+            return lstNombresRepetidos;
         }
 
         public void GetPromEdadRacing()
@@ -137,6 +203,7 @@ namespace Recursiva
 
             foreach (string linea in lineas)
             {
+
                 var valores = linea.Split(';');
 
 
@@ -166,12 +233,17 @@ namespace Recursiva
            
             GetPromEdadRacing(); //Obtiene el promedio de edad de los socios de Racing.
 
-           GridViewCasadosConEstudios.DataSource = GetCasadosConEstudios(); //Obtiene los primeras 100 personas casadas y con estudios ordenados por su edad.
-           GridViewCasadosConEstudios.DataBind();
 
 
-            GridViewCasadosConEstudios.DataSource = GetCantSociosMayoryMenorEdad(); //Obtiene los primeras 100 personas casadas y con estudios ordenados por su edad.
-            GridViewCasadosConEstudios.DataBind(); 
+          GridViewCasadosConEstudios.DataSource = GetCasadosConEstudios(); //Obtiene los primeras 100 personas casadas y con estudios ordenados por su edad.
+          GridViewCasadosConEstudios.DataBind();
+
+
+          GridView1.DataSource = GetDataEquipos();
+          GridView1.DataBind();
+
+            GridView2.DataSource = NombresMasComunesRiver();
+            GridView2.DataBind();
 
 
         }
