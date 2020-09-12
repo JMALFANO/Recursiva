@@ -4,9 +4,11 @@ using System.Text;
 
 namespace Entidades
 {
-    public class NombresComunesRiverDTO
+    public class NombresComunesDTO
     {
         public string Nombre {get;set;}
 
+        public string Equipo { get; set; }
+        public int Cantidad { get; set; }
     }
 }

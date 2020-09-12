@@ -7,12 +7,9 @@ namespace Entidades
     {
         public string Nombre { get; set; }
         public int Edad { get; set; }
-        public Equipo Equipo { get; set; }
+        public string Equipo { get; set; }
         public string EstadoCivil { get; set; }
         public string NiveldeEstudios { get; set; }
 
-        public Socio() {
-            this.Equipo = new Equipo();
-        }
     }
 }

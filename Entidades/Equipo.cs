@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Entidades
 {
-   public class Equipo
+    public class Equipo
     {
-        public string Nombre { set; get; }
+        public string Nombre { get; set; }
     }
 }
